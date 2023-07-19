@@ -33,3 +33,4 @@ export const useWallet = () => {
 
   return { onPresentConnectModal }
 }
+// more abandon destroy blur phone security program world crawl safe document security

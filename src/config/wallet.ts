@@ -138,4 +138,15 @@ export const wallets: WalletConfig<ConnectorNames>[] = [
       return typeof window !== 'undefined' && Boolean(window.ethereum?.isBlocto) ? 0 : 999
     },
   },
+  {
+    title: 'Cronos',
+    icon: MetamaskIcon,
+    connectorId: ConnectorNames.Injected,
+    installed: typeof window !== 'undefined' && Boolean(window.ethereum?.isDeficonnectProvider),
+    priority: () => {
+      // @ts-ignore
+      return typeof window !== 'undefined' && Boolean(window.ethereum?.isDeficonnectProvider) ? 0 : 999
+    },
+    
+  }
 ]
