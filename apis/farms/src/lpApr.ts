@@ -206,7 +206,7 @@ export const updateLPsAPR = async (chainId: number, allFarms: any[]) => {
 
   try {
     if (stableFarms?.length) {
-      const stableAprs: BigNumber[] = await Promise.all(stableFarms.map((f) => getAprsForStableFarm(f, chainId)))
+      const stableAprs: BigNumber[] = await Promise.all(stableFarms.map((f) => getAprsForStableFarm(f)))
 
       const stableAprsMap = stableAprs.reduce(
         (result, apr, index) => ({
